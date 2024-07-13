@@ -123,16 +123,21 @@
   </div>
 
   <script>
-    function login() {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-      if (username === "SuperiCez" && password === "Zaq1zaq!") {
-      if (username === "V8" && password === "infinity") {
-        document.querySelector(".container").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      } else {
-        alert("Invalid username or password");
-      }
+function login() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // ตรวจสอบ username และ password ในเงื่อนไข
+  if ((username === "SuperiCez" && password === "Zaq1zaq!") || (username === "V8" && password === "infinity")) {
+    // เมื่อ username และ password ถูกต้อง
+    document.querySelector(".container").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    // เมื่อ username หรือ password ไม่ถูกต้อง
+    alert("Invalid username or password");
+  }
+}
+
     }
 
     document.getElementById('homeBtn').addEventListener('click', () => {
