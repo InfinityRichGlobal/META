@@ -126,10 +126,14 @@
     function login() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
-      if (username === "ADMIN" && password === "admin"); {
+
+      // ตรวจสอบ username และ password ในเงื่อนไข
+      if ((username === "SuperiCez" && password === "Zaq1zaq!") || (username === "V8" && password === "1234")) {
+        // เมื่อ username และ password ถูกต้อง
         document.querySelector(".container").style.display = "none";
         document.getElementById("content").style.display = "block";
       } else {
+        // เมื่อ username หรือ password ไม่ถูกต้อง
         alert("Invalid username or password");
       }
     }
